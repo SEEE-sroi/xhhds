@@ -1,10 +1,14 @@
-import logo from './logo.svg';
+ 
 import './App.css';
-
+import Profile from './Profile';
+import Login from './Login';
+import ChangeColor from './ChangeColor';
+import { useSelector } from 'react-redux';
 function App() {
+  const   userList = useSelector((state)=>state.userss.value)
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +21,14 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <input type="text" placeholder='Eingange something jetzt' />
+      <button>
+        Click In ordnung Zu Eingange fur ergibnesse
+      </button>
+      <ChangeColor />
+      <Login />
+      <Profile />
     </div>
   );
 }
